@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/admin_crm/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/admin_crm/css/all.css">
+    <link rel="stylesheet" href="/static/admin_crm/css/style.css">
+
+    <title>website development</title>
+</head>
+<body class="bg-light"> 
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
+                    <h2 class="text-center pt-3"> Admin Login </h2> 
+                    <!-- Form -->
+                      <form action="/login/" method="post">
+                        {% csrf_token %} 
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            <input type="text" class="form-control" placeholder="Email" name="email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            <input type="password" class="form-control" placeholder="Password" name="password">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-danger">Login Now</button>
+                        </div>
+                      </form>
+                     <!-- Form -->
+                </div>
+            </div>
+        </div>
+</body>
+</html>
